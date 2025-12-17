@@ -1,2 +1,2 @@
 # abstractappsec.github.io
-simple blog for fun things
+simple site for chatting about application security and suchlike things.
