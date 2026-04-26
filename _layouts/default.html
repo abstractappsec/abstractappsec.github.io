@@ -3,10 +3,13 @@
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     {% seo %}
     <style>
+      * {
+        box-sizing: border-box;
+      }
       :root {
         --bg-color: #282a36;
         --text-main: #f8f8f2;
@@ -113,9 +116,15 @@
         text-decoration: underline;
       }
       @media (max-width: 768px) {
+        header#header {
+          padding-top: calc(max(20px, env(safe-area-inset-top)) + 2vh);
+          height: auto;
+          min-height: 80px;
+          padding-bottom: 15px;
+        }
         .container {
           flex-direction: column;
-          padding-top: 80px;
+          padding-top: calc(130px + 2vh); /* Adjusted offset for extra padding */
         }
         .sidebar {
           width: 100%;
